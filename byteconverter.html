@@ -1,0 +1,166 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"> 
+<head> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+<meta name="description" content="Byte (B), Kilobyte (KB), Megabyte (MB), Gigabyte (GB), and Terabyte (TB) Conversion Tool" />
+<meta name="keywords" content="Byte B Kilobyte KB Megabyte MB Gigabyte GB Terabyte TB Conversion Convert" />
+<link rel="shortcut icon" href="images/favicon.ico">
+<title>:: Byte Conversion Tool ::</title> 
+</head> 
+<body> 
+
+<style type="text/css"> 
+	body {margin: 0px; font-family: "Lucida Grande", "Trebuchet MS", sans-serif; font-size: 14px; background-color: #003e5d; color: #c2d5dc; text-align: center;}
+	a {color: #c2d5dc; outline:none;}
+	a:hover {color: #FFFFFF; text-decoration: none;}
+	h2 {font-weight: normal; font-size: 40px; color: #FFFFFF; margin-top: 30px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; text-align: center;}
+	.container {width: 900px; margin-right: auto; margin-left: auto; text-align: center;}
+
+	#header {background-image: url(images/header-bg.gif); background-repeat: repeat-x; background-position: left top;}
+	#header .container {background-image: url(images/logo-bg.jpg); background-repeat: no-repeat; background-position: left top; height: 100px;}
+
+	#main2 {background-color: #003651; border-top-width: 1px; border-top-style: solid; border-top-color: #3191a7; background-image: url(images/menu-bg.gif); background-repeat: repeat-x; background-position: left top; line-height: 22px; padding-top: 50px; padding-bottom: 100px; margin-right: auto; margin-left: auto;}
+	#main2 img {float: right; display: block; margin: 30px;}
+	#main2 .container {width: auto;}
+
+	#footer {font-size: 12px; padding-top: 30px; padding-bottom: 15px; clear: both;}
+	#footer ul {margin: 0px; padding: 0px; list-style-type: none; text-align: center;}
+	#footer li {display: inline; padding-right: 4px; padding-left: 4px; color: #3191a7; border-right-width: 1px; border-right-style: solid; border-right-color: #074c6a; line-height: 15px;}
+	#footer li.last {border-style: none;}
+	#footer li a {color: #3191a7; text-decoration: none;}
+	#footer li a:hover {color: #146884;}
+
+	.clear {clear: both;}
+	.divide {border-bottom-width: 1px;border-bottom-style: solid;border-bottom-color: #074c6a;margin-top: 20px;margin-bottom: 20px;clear: both;}
+
+	h1 {font-weight: normal; font-size: 15px; margin-top: 15px; margin-bottom: 15px; margin-left: auto; margin-right: auto; font-family: "Lucida Grande", "Trebuchet MS", sans-serif; text-align: center}
+	p {text-align: center; font-family: "Lucida Grande", "Trebuchet MS", sans-serif; font-size: 12px;}
+	table, td, th, tr {margin-left: auto; margin-right: auto; font-family: "Lucida Grande", "Trebuchet MS", sans-serif; font-size: 20px; text-align:center; padding: 5px;}
+	td {border: 1px solid #C0C0C0; padding: 10px;}		
+</style>
+
+<div id="header"> 
+<div class="container"> 
+
+<h2>Byte Conversion Tool</h2> 
+<h1>This Byte Converter Tool is designed to quickly convert Bytes, Kilobytes, Megabytes, Gigabytes, and Terabytes.</h1>
+<div class="clear">
+
+</div> 
+</div> 
+</div> 
+
+<div id="main2"> 
+<div class="container">
+
+<p>
+<script language="JavaScript"><!--
+
+function convert(f) {
+    f.kb.value=Math.round(f.byte.value/1024*100000)/100000
+    f.mb.value=Math.round(f.byte.value/1048576*100000)/100000
+    f.gb.value=Math.round(f.byte.value/1073741824*100000)/100000
+    f.tb.value=Math.round(f.byte.value/1099511627776*100000)/100000     
+  }
+
+function convertkb(f) {
+    f.byte.value=Math.round(f.kb.value*1024*100000)/100000
+    f.mb.value=Math.round(f.kb.value/1024*100000)/100000
+    f.gb.value=Math.round(f.kb.value/1048576*100000)/100000
+    f.tb.value=Math.round(f.kb.value/1073741824*100000)/100000    
+  }
+
+function convertmb(f) {
+    f.byte.value=Math.round(f.mb.value*1048576*100000)/100000
+    f.kb.value=Math.round(f.mb.value*1024*100000)/100000
+    f.gb.value=Math.round(f.mb.value/1024*100000)/100000
+    f.tb.value=Math.round(f.mb.value/1073741824*100000)/100000    
+  }
+
+function convertgb(f) {
+    f.byte.value=Math.round(f.gb.value*1073741824*100000)/100000
+    f.kb.value=Math.round(f.gb.value*1048576*100000)/100000
+    f.mb.value=Math.round(f.gb.value*1024*100000)/100000
+    f.tb.value=Math.round(f.gb.value/1024*100000)/100000     
+  }
+  
+function converttb(f) {
+    f.byte.value=Math.round(f.tb.value*1099511627776*100000)/100000
+    f.kb.value=Math.round(f.tb.value*1073741824*100000)/100000
+    f.mb.value=Math.round(f.tb.value*1048576*100000)/100000
+    f.gb.value=Math.round(f.tb.value*1024*100000)/100000	
+  }
+   
+// --></script>
+</p>
+
+<form>
+
+<table>
+
+    <tr> 
+		<td>Unit:</td>
+		<td>bytes</td>
+		<td>kilobytes</td>
+		<td>megabytes</td>
+		<td>gigabytes</td>
+		<td>terabytes</td>
+    </tr>
+    <tr> 
+		<td>Value:</td>
+		<td><input type="text" size="16" name="byte" value="0" style="color: #FFFFFF; font-size: 15px; font-family: Verdana; background-color: #003e5d; padding: 4px; border: 1px solid #3191a7;"></td>
+		<td><input type="text" size="16" name="kb" value="0" style="color: #FFFFFF; font-size: 15px; font-family: Verdana; background-color: #003e5d; padding: 4px; border: 1px solid #3191a7;"></td>
+		<td><input type="text" size="16" name="mb" value="0" style="color: #FFFFFF; font-size: 15px; font-family: Verdana; background-color: #003e5d; padding: 4px; border: 1px solid #3191a7;"></td>
+		<td><input type="text" size="16" name="gb" value="0" style="color: #FFFFFF; font-size: 15px; font-family: Verdana; background-color: #003e5d; padding: 4px; border: 1px solid #3191a7;"></td>
+		<td><input type="text" size="16" name="tb" value="0" style="color: #FFFFFF; font-size: 15px; font-family: Verdana; background-color: #003e5d; padding: 4px; border: 1px solid #3191a7;"></td>
+    </tr>
+	<tr> 
+		<td>Calculate:</td>
+		<td><input type="button" name="B2" value="Submit" onClick="convert(this.form)" style="color: #FFFFFF; font-size: 15px; font-family: Verdana; background-color: #003e5d; padding: 4px; border: 1px solid #3191a7;"></td>
+		<td><input type="button" name="B22" value="Submit" onClick="convertkb(this.form)" style="color: #FFFFFF; font-size: 15px; font-family: Verdana; background-color: #003e5d; padding: 4px; border: 1px solid #3191a7;"></td>
+		<td><input type="button" name="B23" value="Submit" onClick="convertmb(this.form)" style="color: #FFFFFF; font-size: 15px; font-family: Verdana; background-color: #003e5d; padding: 4px; border: 1px solid #3191a7;"></td>
+		<td><input type="button" name="B24" value="Submit" onClick="convertgb(this.form)" style="color: #FFFFFF; font-size: 15px; font-family: Verdana; background-color: #003e5d; padding: 4px; border: 1px solid #3191a7;"></td>
+		<td><input type="button" name="B24" value="Submit" onClick="converttb(this.form)" style="color: #FFFFFF; font-size: 15px; font-family: Verdana; background-color: #003e5d; padding: 4px; border: 1px solid #3191a7;"></td>
+    </tr>
+	
+</table>
+<p><input type="reset" value="Reset" style="color: #FFFFFF; font-size: 15px; font-family: Verdana; background-color: #003e5d; padding: 4px; border: 1px solid #3191a7;"/></p><br />
+
+</form>
+
+<p>
+1 Byte = 8 Bits<br />
+1 Kilobyte = 1024 Bytes<br />
+1 Megabyte = 1048576 Bytes<br />
+1 Gigabyte = 1073741824 Bytes<br />
+1 Terabyte = 1099511627776 bytes
+</p>
+  
+<br /><p>Byte Conversion Compliments of <a href="http://www.pageonelegal.com/" target="_blank">Page One, LCC</a>.</p> 
+
+</div> 
+</div> 
+
+<div id="footer"> 
+<ul> 
+<li>&copy; Page One, LLC</li> 
+<li>200 Fourth Avenue, North</li> 
+<li>Nashville, TN 37219</li> 
+<li>615-780-2101</li> 
+<li class="last"><a href="mailto:solutions@pageonelegal.com">solutions@pageonelegal.com</a></li> 
+</ul> 
+</div> 
+
+<script type="text/javascript"> 
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script> 
+
+<script type="text/javascript"> 
+try {
+var pageTracker = _gat._getTracker("UA-9965410-1");
+pageTracker._trackPageview();
+} catch(err) {}
+</script>
+</body> 
+</html> 
